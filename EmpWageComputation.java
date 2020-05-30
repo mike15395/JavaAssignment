@@ -1,12 +1,13 @@
-class EmpWageComputation{
-	public static void main(String[] args){
+class EmpWageCalc {
 
-		System.out.println("Welcome to Employee Wage Computation Program");
+	public void wagecalculation(){
 
-		int num_working_days=20, totalwage=0, total_emphrs=0, max_hours=100 , total_working_days=0 , maxhrs_month=20;
+		int num_working_days=20, totalwage=0, total_emphrs=0, max_hours=100,
+			total_working_days=0 , maxhrs_month=20;
 
 		while (total_emphrs<max_hours && total_working_days < maxhrs_month)
-		{
+
+	 {
 			total_working_days++;
 			int empcheck = (int)(Math.random()*10)%3;
 			//System.out.println(empcheck);
@@ -31,6 +32,22 @@ class EmpWageComputation{
 				totalwage += wage;
 		}
 			System.out.println("Monthly wage is="+totalwage);
+
+		}
+
+}
+
+
+
+
+class EmpWageComputation{
+	public static void main(String[] args){
+
+		System.out.println("Welcome to Employee Wage Computation Program");
+
+		EmpWageCalc obj = new EmpWageCalc();
+		obj.wagecalculation();
+
 	}
 
 
