@@ -7,16 +7,21 @@ class EmpWageComputation{
 
 		int wage_per_hour = 20 , wage=0 , emphrs=0;
 
-		if (empcheck == 1)  // FullTime
-			emphrs = 8;
-		else if (empcheck == 2)  // PartTime
-   		emphrs = 4;
-		else								// Absent
-			emphrs = 0;
+		switch (empcheck)
+		{
+			case 1 :  // FullTime
+				emphrs = 8;
+				break;
+			case 2 :  // PartTime
+   			emphrs = 4;
+				break;
+			default :					// Absent
+				emphrs = 0;
+
+		}
 
 			wage = wage_per_hour*emphrs;
-			System.out.println("Employee wage="+wage); 
-
+			System.out.println("Employee wage="+wage);
 	}
 
 
